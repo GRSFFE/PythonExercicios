@@ -1,0 +1,5 @@
+n1 = float(input('Quanto dinheiro você tem na carteira? R$'))
+print('Com R${} você pode comprar US${:.2f}'.format(n1, n1/5.11))
+print('Com R${} você pode comprar €${:.2f}'.format(n1, n1/5.31))
+print('Com R${} você pode comprar ¥${:.2f}'.format(n1, n1/0.038))
+print('Com R${} você pode comprar £${:.2f}'.format(n1, n1/6.17))
