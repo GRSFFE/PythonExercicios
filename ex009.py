@@ -10,3 +10,8 @@ print('{} x {} = {}'.format(n1, 8, n1*8))
 print('{} x {} = {}'.format(n1, 9, n1*9))
 print('{} x {} = {}'.format(n1, 10, n1*10))
 
+num = int(input('Digite um número para ver sua tabuada: '))
+for c in range(1, 11):
+    print(f'{num} x {c} = {num*c}')
+
+
