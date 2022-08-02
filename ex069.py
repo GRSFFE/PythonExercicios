@@ -1,16 +1,23 @@
+tot18 = totH = totM20 = 0
 print('_' * 20)
 print(f'CADASTRE UMA PESSOA')
 print('_' * 20)
-conta = 0
-somahomem = 0
-somamulher = 0
-while 'N':
+while True:
     idade = int(input('Idade: '))
+    sexo = ' '
+    while sexo not in 'MF':
+        sexo = str(input('Sexo: [M/F] ')).strip().upper()[0]
     if idade >= 18:
-        conta += idade
-    sexo = str(input('Sexo [M/F]: '))
-    cont = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
-    if 'Nn':
-        print(f'Total de pessoas com mais de 18 anos: {conta}')
-        print('Ao todo temos {} homens cadastrados')
-        print('E temos {} mulheres cadastradas')
+        tot18 += 1
+    if sexo == 'M':
+        totH += 1
+    if sexo == 'F' and idade < 20:
+        totM20 += 1
+    resp = ' '
+    while resp not in 'SN':
+        resp = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
+    if resp == 'N':
+        break
+print(f'Total de pessoas com mais de 18 anos: {tot18}')
+print(f'Ao todo temos {totH} homens cadastrados')
+print(f'E temos {totM20} mulheres com menos de 20 anos')
